@@ -42,4 +42,4 @@ class Number:
     def __pow__(self, other):
         power = float(other)
         result = self.value**power
-        return Number(result, relative_error=abs(self.relative_error*power))
+        return Number(result, relative_error=self.relative_error*abs(power))
