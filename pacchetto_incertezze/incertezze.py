@@ -1,5 +1,5 @@
 class Number:
-    def __init__(self, value, absolute_error=0, relative_error=0) -> None:
+    def __init__(self, value:float, absolute_error:float=0, relative_error:float=0) -> None:
         absolute_error = abs(absolute_error)
         relative_error = abs(relative_error)
         self.value = value
@@ -12,12 +12,15 @@ class Number:
         else:
             self.relative_error = 0
             self.absolute_error = 0
+
+    def __str__(self) -> str:
+        return f"({self.value}±{self.absolute_error})"
     
     def str_absolute(self):
-        return f"({self.value}±{self.absolute_error:.3f})"
+        return f"({self.value}±{self.absolute_error})"
     
     def str_relative(self):
-        return f"({self.value}±{self.relative_error*100:.2f}%)"
+        return f"({self.value}±{self.relative_error*100}%)"
     
     def __add__(self, other):
         return Number(self.value + other.value, self.absolute_error + other.absolute_error)
