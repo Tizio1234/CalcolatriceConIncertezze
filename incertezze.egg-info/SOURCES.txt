@@ -1,0 +1,7 @@
+setup.py
+incertezze.egg-info/PKG-INFO
+incertezze.egg-info/SOURCES.txt
+incertezze.egg-info/dependency_links.txt
+incertezze.egg-info/top_level.txt
+pacchetto_incertezze/__init__.py
+pacchetto_incertezze/incertezze.py
