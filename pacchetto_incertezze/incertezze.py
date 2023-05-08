@@ -14,13 +14,13 @@ class Number:
             self.absolute_error = 0
 
     def __str__(self) -> str:
-        return f"({self.value}±{self.absolute_error})"
+        return f"({self.value}±{self.absolute_error:.2f})"
     
     def str_absolute(self):
-        return f"({self.value}±{self.absolute_error})"
+        return f"({self.value}±{self.absolute_error:.2f})"
     
     def str_relative(self):
-        return f"({self.value}±{self.relative_error*100}%)"
+        return f"({self.value}±{self.relative_error*100:.1f}%)"
     
     def __add__(self, other):
         return Number(self.value + other.value, self.absolute_error + other.absolute_error)
